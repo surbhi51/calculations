@@ -1,0 +1,19 @@
+<main>
+  <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-md-10 mx-auto col-lg-5">
+        <%= form_for homes_path, class: "p-4 p-md-5 border rounded-3 bg-light" do %>
+          <div class="form-floating mb-3">
+            <%= number_field_tag 'price','', class: "form-control", placeholder: "Enter Number", required: true %>
+            <label for="floatingInput">Enter Number</label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Calculate</button>
+        <% end %>
+      </div>
+    </div>
+    <div class="text-center">
+      <%= turbo_frame_tag 'cal_res' %>
+      <h2></h2>
+    </div>
+  </div>
+</main>
